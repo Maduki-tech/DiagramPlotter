@@ -31,7 +31,7 @@ include_directories(${SFML_INCLUDE_DIRS})
 # Add test executable
 file(GLOB_RECURSE TEST_SOURCES "./tests/*.cpp")
 add_executable(runUnitTests ${TEST_SOURCES} ${C_SOURCES} ${CPP_SOURCES} ${HEADERS})
-target_link_libraries(runUnitTests GTest::gtest_main)
+target_link_libraries(runUnitTests GTest::gtest_main sfml-graphics sfml-audio sfml-window sfml-system)
 
 # Link SFML
 target_link_libraries(main sfml-graphics sfml-audio sfml-window sfml-system)
